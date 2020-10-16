@@ -8,7 +8,7 @@ DATA ENDS
 CODE SEGMENT
 START:
     MOV AX,DATA    ;why these two line are required?
-    MOV DS,AX      ;find here -> https://bit.ly/3lMPeeT
+    MOV DS,AX      ;find here -> https://bit.ly/3lMPeeT (to link data segement)
 
     
     
