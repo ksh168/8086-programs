@@ -10,16 +10,16 @@ CODE SEGMENT
 START:
         MOV AX,DATA
         MOV DS,AX
-        MOV CL,05H
-        MOV SI,OFFSET ARR   ;ARRAY
+        ;POINT SI AT OFFSET OF ARR(BEGINNING POINTER OF ARRAY) (SI ACTS AS POINTER)
+        MOV SI,OFFSET ARR
+        MOV CL,07H       ;TAKE ARRAY SIZE IN CL 
+        
 AGAIN:
-        MOV AL,[SI]
-        MUL AL
-        MOV [SI],AL
-        INC SI
-        LOOP AGAIN
-        NOP
-        MOV AH,4CH
+        MOV AL,[SI]     ;LOAD DATA FROM MEMORY TO AL
+        MUL AL          ;AL = AL*AL
+        MOV [SI],AL     ;STORE AL TO MEMORY POINTED BY SI
+        INC SI          ;INCREMENT POINTER (MOVE TO NEXT ADDRESS)
+LOOP AGAIN              ;LOOP ENDS(I GUESS...?)
         NOP
         
 CODE ENDS
