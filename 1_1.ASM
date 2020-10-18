@@ -7,11 +7,13 @@ DATA ENDS
 CODE SEGMENT
 
 START:
-        MOV BL,05H
-        MOV DL,09H
-        ADD BL,DL
-        MOV CL,BL
-        INT 21H              ;THIS IS REQUIRED(interrupt 21)   (can also use NOP)
+        MOV BL,05H              ;BL = 05H
+        MOV DL,09H              ;DL = 09H
+        ADD BL,DL               ;BL = BL+DL
+        MOV CL,BL               ;CL = BL
+        ;INT 21H              ;THIS IS REQUIRED(interrupt 21)   (can also use NOP)
+
+        HLT             ;HALT THE PROGRAM
 
 CODE ENDS
 

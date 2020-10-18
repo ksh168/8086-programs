@@ -1,4 +1,4 @@
-;
+;Write an ALP to find the largest element and lowest element of the given byte array.
 
 ASSUME CS:CODE, DS:DATA
 DATA SEGMENT
@@ -11,6 +11,7 @@ START:
     MOV DS,AX      ;find here -> https://bit.ly/3lMPeeT (to link data segement)
 
     ;write code here
+    
     
 
 

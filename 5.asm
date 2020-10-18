@@ -1,5 +1,7 @@
-;https://www.geeksforgeeks.org/8086-program-to-generate-fibonacci-sequence/
 ;Write an ALP to output Fibonacci series upto 15 terms.
+;https://bit.ly/3lZm2Bi
+
+
 ASSUME CS:CODE, DS:DATA
 
 DATA SEGMENT
@@ -8,9 +10,26 @@ DATA ENDS
 CODE SEGMENT
 
 START:
-        
+        MOV AL,00H      ;LOAD AL WITH 00H
+        MOV SI,0100H    ;POINT OFFSET TO 0100H
 
-        NOP
+        MOV [SI],AL     ;STORE FIRST NO. INTO MEMORY
+        INC SI
+        
+        ADD AL,01H      ;ADD 01 WITH AL
+        MOV [SI],AL     ;STORE SECOND NO. IN MEMORY
+        MOV CX,[200H]   ;TAKE LIMIT OF SEQUENCE
+
+        SUB CX,0002H    ;REMOVE 02 FROM LIMIT
+
+L1:     MOV AL,[SI-1]   ;TAKE THE LAST STORED VALUE INTO AL
+        ADD AL,[SI]     ;ADD CURRENT VALUE WITH AL
+        INC SI          ;POINT TO NEXT LOCATION
+         
+        MOV [SI],AL       ;STORE AL CONTENT INTO MEMORY
+LOOP L1 
+
+        HLT
         
 CODE ENDS
 END START
