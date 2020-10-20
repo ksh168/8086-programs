@@ -9,7 +9,7 @@ CODE SEGMENT
 START:
         MOV CL,08H
         MOV DL,01H
-        SUB CL,DL
+        SUB CL,DL       ;CL = CL-DL
         INT 21;INTERRUPT   (can also use NOP)
 
 CODE ENDS
