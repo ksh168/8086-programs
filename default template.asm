@@ -14,7 +14,10 @@ START:
     
 
 
-    HLT
+     
+    EXIT:     
+        MOV AH,4CH
+        INT 21H 
 
 CODE ENDS
 END START
