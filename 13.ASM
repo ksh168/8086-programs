@@ -20,7 +20,7 @@ START:
         LEA SI,RES          ;initialize RES to SI register  -> Load Effective Address of RES variable to SI Register. 
         CALL HEX2DEC        ;Call Procedure(FUNCTION) HEX2DEC
    
-        LEA DX,RES          ;alternative ->MOV DX, OFFSET RES 
+        LEA DX,RES          ;alternative ->MOV DX,OFFSET RES 
         MOV AH,9            ;PRINT the String or Message of the address present in DX register.
         INT 21H
          
