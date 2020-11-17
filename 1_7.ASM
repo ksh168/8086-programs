@@ -19,7 +19,6 @@ START:
 		MOV BL,B
 		DIV B         ;DIVIDE AND STORE THE RESULT IN AL
 
-		;INT 3
     
     HLT
 
