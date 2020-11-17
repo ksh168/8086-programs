@@ -16,11 +16,12 @@ START:
         MOV CL,07H       ;TAKE ARRAY SIZE IN CL(size->N) 
         
 AGAIN:
-        MOV AL,ARR[SI]     ;LOAD DATA FROM MEMORY TO AL         ;arr[i]
-        MUL AL          ;AL = AL*AL
-        MOV ARR[SI],AL     ;STORE AL TO MEMORY POINTED BY SI (replace)
-        INC SI          ;INCREMENT POINTER (MOVE TO NEXT ADDRESS)
-LOOP AGAIN              ;LOOP ENDS(I GUESS...?)
+        MOV AL,ARR[SI]          ;LOAD DATA FROM MEMORY TO AL 
+                                ;arr[i]
+        MUL AL                  ;AL = AL*AL
+        MOV ARR[SI],AL          ;STORE AL TO MEMORY POINTED BY SI (replace)
+        INC SI                  ;INCREMENT POINTER (MOVE TO NEXT ADDRESS)
+LOOP AGAIN                      ;LOOP ENDS(I GUESS...?)
 
         HLT
         
