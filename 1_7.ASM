@@ -18,7 +18,7 @@ START:
 		MOV AL,A
 		MOV BL,B
 		DIV B         ;DIVIDE AND STORE THE RESULT IN AL
-
+   
     
     HLT
 

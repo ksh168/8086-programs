@@ -5,7 +5,7 @@
 
 ASSUME CS:CODE, DS:DATA
 DATA SEGMENT
-     ;NUM DB 01FFH  ;can assign only upto 8 bits(for 16bits directly assign to register AX)
+     NUM DW 01FFH   ;0 is added if first digit is an alphabet
      COUNT DW ?     ;count(not intialised)
 DATA ENDS
 
@@ -14,8 +14,8 @@ START:
      MOV AX,DATA    ;why these two line are required?
      MOV DS,AX      ;find here -> https://bit.ly/3lMPeeT
 
-     ;MOV AX,NUM     ;NUM = 005F -> 0101 1111(for 8 bits only)
-     MOV AX,0F1FFH   ;16 bit num (F1FFH -> 13 ones)     ;0 is added if first digit is an alphabet
+                    ;NUM = 005F -> 0101 1111(for 8 bits only)
+     MOV AX,NUM     ;16 bit num (F1FFH -> 13 ones)     
      MOV CX,10H     ;counter for rotating 16 times(to iterate over all bits)
      MOV BX,00H     ;initialise count as 0(no. of 1s)
 
