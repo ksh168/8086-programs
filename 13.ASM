@@ -7,10 +7,10 @@ ASSUME DS:DATA,CS:CODE
 DATA SEGMENT
      NUM DW 1234H
      RES  DB 10 DUP ('$')       ;declaration of Array initialized with ‘$’ which works as New Line Character. $ is used as (\n) NULL character in C program.
-                                ;Here 10 DUP (‘$’) stands for N i.e. Size of Array or Array Size. DUP stands for Duplicate i.e. it will duplicate the value in All the Array with the value present in Bracket (i.e. $).
+    ;Here 10 DUP (‘$’) stands for N i.e. Size of Array or Array Size. DUP stands for Duplicate i.e. it will duplicate the value in All the Array with the value present in Bracket (i.e. $).
 DATA ENDS
+
 CODE SEGMENT
- 
 START:       
         MOV AX,DATA
         MOV DS,AX
@@ -46,7 +46,7 @@ HEX2DEC PROC NEAR   ;NEAR is used to call the Procedure within the program where
         PUSH DX
         ;CX register as a counter and counting the numbers of digits in their ASCII form which are pushed into Stack. So that the same count will help to POP the values out of Stack.
         INC CX
- 
+
         CMP AX,9
         JG LOOP1    ;Jump if AX greater THAN 9
      
@@ -63,5 +63,4 @@ HEX2DEC PROC NEAR   ;NEAR is used to call the Procedure within the program where
 
         RET             ;RETURN, THIS instruction is used only if  the control is been passed to the code outside Main like to Procedure. this return the control to the place where the Procudure was called.
 HEX2DEC ENDP                ;PROCEDURE ENDS
-   
 END START                   ;PROGRAM ENDS

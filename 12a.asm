@@ -18,13 +18,9 @@ START:
         ADD AL,CHAR1
         
         AAA
-
         MOV RES,AX
-        
-     
-    EXIT:     
-        MOV AH,4CH
-        INT 21H 
+             
+    HLT
 
 CODE ENDS
 END START

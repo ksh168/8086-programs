@@ -1,6 +1,5 @@
 ;Write an ALP to add two BCD numbers
 
-
 ASSUME CS:CODE, DS:DATA
 DATA SEGMENT
     A DB 13H
@@ -21,10 +20,7 @@ START:
         ADD AL,CL
         DAA
         
-     
-    EXIT:     
-        MOV AH,4CH
-        INT 21H 
+    HLT 
 
 CODE ENDS
 END START

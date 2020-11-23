@@ -31,8 +31,8 @@ START:
 
     HERE:          
         INC CX      ; Increment
-        cmp cx,N    ; Compare cx to the limit
-        jle AGAIN   ; Loop while less or equal
+        CMP CX,N    ; Compare cx to the limit
+        JLE AGAIN   ; Loop while less or equal
 
 
     MOV BL,COUNT
