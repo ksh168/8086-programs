@@ -5,6 +5,6 @@ Find list of programs [here](https://github.com/ksh168/8086-programs/blob/master
 
 This repo also contains some extra practice programs  
 
-All codes were tested using DOSBOX
+All codes were tested using [DOSBOX](https://www.dosbox.com/)
 
 #### If you find any errors or better method please notify by creating a pull request.
