@@ -1,4 +1,5 @@
 ;
+;This can be used as a default template for all your 8086 codes
 
 ASSUME CS:CODE, DS:DATA
 DATA SEGMENT
