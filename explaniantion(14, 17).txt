@@ -1,0 +1,6 @@
+Q14. 	suppose you are having a byte array : 04H,02H,5H,6H,02H,8H,20H.  
+	we want to see 02H byte data how many times it occurred. Here 2-times is the result.
+
+Q17. 	If your word data (items) are: 253AH, 54BDH, 7A45H, E447H, BCD4H, F429H. 
+	In these items, the part no. is at third position from right to left or second position from left to right. 
+	Here 04H part no.  is present in 3-items. So the result is 03H.
